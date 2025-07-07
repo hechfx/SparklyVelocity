@@ -21,10 +21,8 @@ jobs:
         distribution: 'zulu'
     - name: Build with Gradle
       run: ./gradlew build
-    - name: listar arquivos gerados
-      run: ls -R proxy/build
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: sparkly-velocity
-        path: build/libs/velocity-3.4.0-sparklyvelocity-SNAPSHOT.jar
+        path: proxy/build/libs/velocity-proxy-3.4.0-sparklyvelocity-SNAPSHOT-all.jar
